@@ -13,6 +13,8 @@
 		6ACDD5181E0AF6EB00B2BC32 /* AlgotimoKnn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6ACDD5161E0AF6EB00B2BC32 /* AlgotimoKnn.xcdatamodeld */; };
 		6ACDD51A1E0AF6EB00B2BC32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ACDD5191E0AF6EB00B2BC32 /* Assets.xcassets */; };
 		6ACDD51D1E0AF6EB00B2BC32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ACDD51B1E0AF6EB00B2BC32 /* LaunchScreen.storyboard */; };
+		6ACDD5251E0AF74F00B2BC32 /* Flor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACDD5241E0AF74F00B2BC32 /* Flor.swift */; };
+		6ACDD5291E0B020400B2BC32 /* iris.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6ACDD5281E0B020400B2BC32 /* iris.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		6ACDD5191E0AF6EB00B2BC32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6ACDD51C1E0AF6EB00B2BC32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6ACDD51E1E0AF6EB00B2BC32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6ACDD5241E0AF74F00B2BC32 /* Flor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flor.swift; sourceTree = "<group>"; };
+		6ACDD5281E0B020400B2BC32 /* iris.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iris.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				6ACDD50F1E0AF6EB00B2BC32 /* AppDelegate.swift */,
 				6ACDD5111E0AF6EB00B2BC32 /* ViewController.swift */,
+				6ACDD5241E0AF74F00B2BC32 /* Flor.swift */,
+				6ACDD5281E0B020400B2BC32 /* iris.txt */,
 				6ACDD5131E0AF6EB00B2BC32 /* Main.storyboard */,
 				6ACDD5191E0AF6EB00B2BC32 /* Assets.xcassets */,
 				6ACDD51B1E0AF6EB00B2BC32 /* LaunchScreen.storyboard */,
@@ -128,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6ACDD51D1E0AF6EB00B2BC32 /* LaunchScreen.storyboard in Resources */,
+				6ACDD5291E0B020400B2BC32 /* iris.txt in Resources */,
 				6ACDD51A1E0AF6EB00B2BC32 /* Assets.xcassets in Resources */,
 				6ACDD5151E0AF6EB00B2BC32 /* Main.storyboard in Resources */,
 			);
@@ -140,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ACDD5251E0AF74F00B2BC32 /* Flor.swift in Sources */,
 				6ACDD5121E0AF6EB00B2BC32 /* ViewController.swift in Sources */,
 				6ACDD5101E0AF6EB00B2BC32 /* AppDelegate.swift in Sources */,
 				6ACDD5181E0AF6EB00B2BC32 /* AlgotimoKnn.xcdatamodeld in Sources */,
