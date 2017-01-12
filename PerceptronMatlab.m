@@ -4,9 +4,10 @@ D = [0;1;1;1];
 [nPadroes, nEntradas] = size(X);
 
 txAprendizado = 0.5;
-w = zeros(nEntradas+1,1);
+w = rand(nEntradas+1,1);
 bias = 1;
 erroEpoca = 1;
+epoca = 0;
 
 while(erroEpoca~=0)
   Y = zeros(4,1);
@@ -29,6 +30,7 @@ while(erroEpoca~=0)
     erroEpoca = erroEpoca + abs(erro);
     
   end
+  epoca = epoca + 1;
 end
 
 disp('Treinamento do Perceptron (AND)');
