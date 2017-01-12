@@ -59,12 +59,10 @@ class Flor: NSObject {
     //função que classifica uma Flor de acordo com o algoritmo knn
     static func classificarAmostra(flores: [Flor], novaFlor: Flor, k: Int) -> String {
         var q = k
-        if q % 2 == 0 {
-            q = q - 1
-            if q <= 0 {
-                q = 1
-            }
+        if q <= 0 {
+            q = 1
         }
+        
         
         var dist_individuos = [FlorDistance]()
         var aux: FlorDistance?

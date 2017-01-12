@@ -22,15 +22,16 @@ class ViewController: UIViewController {
     var floresTreinamento = [Flor]()
     var floresAmostra = [Flor]()
     
-    var k = 50
+    var k: Int?
     
-    var tamTreinamento = 100
+    var tamTreinamento: Int?
     var tamTestes: Int?
     var arrayAcertos = [Int]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.textView.text = ""
+        getTxt()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -42,7 +43,6 @@ class ViewController: UIViewController {
     @IBAction func actionPrincipal(_ sender: Any) {
         arrayAcertos = []
         self.textView.text = ""
-        getTxt()
         
         k = Int(qtdK.text!)!
         
@@ -90,7 +90,9 @@ class ViewController: UIViewController {
     //Embaralha o array de treinamento e o array de amostra
     func radomTreinamentoAmostra() {
         floresAux = flores
-        for _ in 0...tamTreinamento-1{
+        floresTreinamento = []
+        floresAmostra = []
+        for _ in 0...tamTreinamento!-1{
             let tam = UInt32(floresAux.count)
             let index = arc4random()%tam
             floresTreinamento.append(floresAux[Int(index)])
@@ -110,16 +112,16 @@ class ViewController: UIViewController {
         var acertos = 0
         for i in 0...tamTestes!-1{
             let flor = floresAmostra[i]
-            let classeObtida = Flor.classificarAmostra(flores: floresTreinamento, novaFlor: flor, k: k)
-            print("\nClasse Obtida: \(classeObtida)")
-            print(("Classe Desejada: \(flor.classe!)"))
+            let classeObtida = Flor.classificarAmostra(flores: floresTreinamento, novaFlor: flor, k: k!)
+            //print("\nClasse Obtida: \(classeObtida)")
+            //print(("Classe Desejada: \(flor.classe!)"))
             self.textView.text.append("Classe Obtida: \(classeObtida)\n")
             self.textView.text.append("Classe Desejada: \(flor.classe!)\n")
             if classeObtida == flor.classe!{
                 acertos = acertos + 1
             }
         }
-        print("Acertos: \(acertos) em 10 testes")
+        print("Acertos: \(acertos) em \(tamTestes!) testes")
         arrayAcertos.append(acertos)
         self.textView.text.append("Acertos: \(acertos) em \(tamTestes!) testes\n\n")
         return acertos
@@ -128,11 +130,11 @@ class ViewController: UIViewController {
     // Retorna o número médio de acertos
     func mediaAcertos() -> Double{
         var soma = 0
-        for _ in 0...29{
+        for _ in 0...9{
             radomTreinamentoAmostra()
             soma = soma + verificaAmostra()
         }
-        return Double(soma)/Double(30)
+        return Double(soma)/Double(10)
     }
     
     //Retorna o desvio padrão
@@ -142,7 +144,7 @@ class ViewController: UIViewController {
             soma = soma + pow((media - Double(i)), 2)
         }
         print(soma)
-        return sqrt(soma/Double(30*tamTestes!))
+        return sqrt(soma/10)
     }
     
 }
